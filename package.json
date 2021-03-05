@@ -13,6 +13,7 @@
   },
   "main": "index.js",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "firebase": "^8.2.10",
     "register-service-worker": "^1.7.1",
     "vue": "^3.0.0",
