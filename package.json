@@ -1,0 +1,11 @@
+{
+  "name": "school",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/eru123/school-vf",
+  "author": "Jericho Aquino <39824083+eru123@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "firebase": "^8.2.10"
+  }
+}
