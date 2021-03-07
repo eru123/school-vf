@@ -1,21 +1,25 @@
 <template>
-  <div>
+  <div class="page-auth">
     <h1>Authentication</h1>
-    <div>
+    <div class="af-container">
       <div v-if="tab == 1">
-        <Login />
+        <Login class="af-main" />
         <div class="af-bottom">
-          Do not have an account? <span @click="tab = 2">Sign up now</span><br />
-          By creating an signing in, you agreed to our
-          <span @click="tab = 3">Terms and Agreements</span>
+          <p>Do not have an account? <span @click="tab = 2">Sign up now</span></p>
+          <p>
+            By creating an signing in, you agreed to our
+            <span @click="tab = 3">Terms and Agreements</span>
+          </p>
         </div>
       </div>
       <div v-if="tab == 2">
-        <Register />
+        <Register class="af-main" />
         <div class="af-bottom">
-          Already have an account? <span @click="tab = 1">Sign in now</span> <br />
-          By signing up, you agreed to our
-          <span @click="tab = 3">Terms and Agreements</span>
+          <p>Already have an account? <span @click="tab = 1">Sign in now</span></p>
+          <p>
+            By signing up, you agreed to our
+            <span @click="tab = 3">Terms and Agreements</span>
+          </p>
         </div>
       </div>
       <div v-if="tab == 3">
@@ -43,7 +47,25 @@ export default {
 };
 </script>
 <style lang="stylus">
+.page-auth
+  padding 0 1em
+
+.af-container
+  max-width 450px
+  min-width 250px
+  margin 2em auto
+  border-radius 1em
+  box-shadow: 0 0 1em rgba(0,0,0,.2)
+  padding 20px 0
+
 .af-bottom
-    span
-        color dodgerblue
+  max-width 80%
+  margin 20px auto
+  p
+    margin-bottom 1em
+  span
+    color dodgerblue
+    cursor pointer
+    &:hover
+      color #0066cc
 </style>
