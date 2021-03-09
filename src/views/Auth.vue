@@ -61,7 +61,6 @@ export default {
   created() {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
-        console.log("from auth", user);
         this.$router.push({ name: "Home" });
       } else {
         this.loaded = true;

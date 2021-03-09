@@ -28,13 +28,10 @@ export default {
         this.error = await firebase
           .auth()
           .createUserWithEmailAndPassword(this.email, this.pass)
-          .then((usrc) => {
-            var user = usrc.user;
-            console.log(user);
+          .then(() => {
             return "";
           })
           .catch((error) => {
-            console.log(error);
             return error.message || `Error code: ${error.code}` || "Unknown Error Occur";
           })
           .finally((e) => {
