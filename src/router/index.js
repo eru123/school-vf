@@ -8,10 +8,15 @@ const routes = [
   },
   {
     path: "/about",
-    name: "About",
-    component: function() {
+    name: "Home",
+    component: function () {
       return import("../views/About.vue");
     }
+  },
+  {
+    path: "/logout",
+    name: "Logout",
+    component: () => (import("@/views/Logout.vue"))
   }
 ];
 
