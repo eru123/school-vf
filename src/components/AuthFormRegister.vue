@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="auth-form">
     <h1>Sign up</h1>
     <div>
       <input type="text" v-model="email" placeholder="Email" /> <br />
@@ -9,6 +9,7 @@
   </div>
 </template>
 <script>
+import "@/styles/auth-form.stylus";
 // import firebase from "@/firebase";
 export default {
   name: "AuthFormLogin",

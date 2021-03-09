@@ -33,6 +33,7 @@
   </div>
 </template>
 <script>
+import "@/styles/auth-page.stylus";
 import Login from "@/components/AuthFormLogin.vue";
 import Register from "@/components/AuthFormRegister.vue";
 export default {
@@ -46,26 +47,3 @@ export default {
   },
 };
 </script>
-<style lang="stylus">
-.page-auth
-  padding 0 1em
-
-.af-container
-  max-width 450px
-  min-width 250px
-  margin 2em auto
-  border-radius 1em
-  box-shadow: 0 0 1em rgba(0,0,0,.2)
-  padding 20px 0
-
-.af-bottom
-  max-width 80%
-  margin 20px auto
-  p
-    margin-bottom 1em
-  span
-    color dodgerblue
-    cursor pointer
-    &:hover
-      color #0066cc
-</style>

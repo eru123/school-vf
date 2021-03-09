@@ -1,0 +1,20 @@
+.auth-form
+    input,button
+        font-family Arial
+        padding 1em 1.5em
+        border-radius .5em
+        margin-top .5em
+        margin-bottom 1em
+        outline none
+        border none
+    input 
+        background #f2f2f2
+        &:hover
+            background #e6e6e6
+        &:focus
+            background #d9d9d9
+    button
+        background #0073e6
+        color white
+        &:hover
+            background #004d99
