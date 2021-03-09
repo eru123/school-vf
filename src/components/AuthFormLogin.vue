@@ -12,7 +12,7 @@
 </template>
 <script>
 import "@/styles/auth-form.stylus";
-// import firebase from "@/firebase";
+import firebase from "@/firebase";
 export default {
   name: "AuthFormLogin",
   data: () => ({
@@ -22,8 +22,25 @@ export default {
     error: "",
   }),
   methods: {
-    submit() {
-      this.loading = true;
+    async submit() {
+      if (this.email && this.pass) {
+        this.loading = true;
+        this.error = await firebase
+          .auth()
+          .signInWithEmailAndPassword(this.email, this.pass)
+          .then(() => {
+            return "";
+          })
+          .catch((error) => {
+            return error.message || `Error code: ${error.code}` || "Unknown Error Occur";
+          })
+          .finally((e) => {
+            this.loading = false;
+            return e;
+          });
+      } else {
+        this.error = "Input the credentials first";
+      }
     },
   },
 };

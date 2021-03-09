@@ -14,7 +14,7 @@
 import "@/styles/auth-form.stylus";
 import firebase from "@/firebase";
 export default {
-  name: "AuthFormLogin",
+  name: "AuthFormRegister",
   data: () => ({
     email: "",
     pass: "",
