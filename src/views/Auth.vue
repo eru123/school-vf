@@ -41,6 +41,9 @@ export default {
   data: () => ({
     tab: 1,
   }),
+  created() {
+    console.log("from auth", this.$store.state.usr);
+  },
   components: {
     Login,
     Register,

@@ -2,9 +2,11 @@
   <div class="auth-form">
     <h1>Sign in</h1>
     <div>
-      <input type="text" v-model="email" placeholder="Email" /> <br />
-      <input type="password" v-model="pass" placeholder="Password" /> <br />
-      <button @click="submit">Authenticate</button>
+      <div class="auth-form-error" v-if="error" @click="error = ''">{{ error }}</div>
+      <input type="text" v-model="email" placeholder="Email" :disabled="loading" /> <br />
+      <input type="password" v-model="pass" placeholder="Password" :disabled="loading" />
+      <br />
+      <button @click="submit" :disabled="loading">Authenticate</button>
     </div>
   </div>
 </template>
@@ -17,6 +19,7 @@ export default {
     email: "",
     pass: "",
     loading: false,
+    error: "",
   }),
   methods: {
     submit() {

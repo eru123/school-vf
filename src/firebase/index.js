@@ -1,8 +1,7 @@
-const firebase = require("firebase");
+import firebase from '@firebase/app'
 
-require("firebase/auth");
-require("firebase/firestore");
-require("dotenv/config");
+import("@firebase/auth");
+import("@firebase/firestore");
 
 // For Firebase JavaScript SDK v7.20.0 and later, `measurementId` is an optional field
 var firebaseConfig = {
@@ -18,4 +17,4 @@ var firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-module.exports = firebase;
+export default firebase
