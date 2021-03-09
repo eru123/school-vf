@@ -6,7 +6,7 @@ export default createStore({
   },
   mutations: {
     usr(state, value) {
-      state.usr = value
+      state.usr = value;
     }
   },
   actions: {},

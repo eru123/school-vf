@@ -7,7 +7,7 @@ import "@firebase/auth";
 export default {
   name: "App",
   created() {
-    firebase.auth().onAuthStateChanged((user) => {
+    firebase.auth().onAuthStateChanged(user => {
       if (user) {
         console.log("authenticated from App.vue", user);
         this.$store.commit("usr", user);
@@ -15,7 +15,7 @@ export default {
         console.log("log in first");
       }
     });
-  },
+  }
 };
 </script>
 <style lang="stylus">

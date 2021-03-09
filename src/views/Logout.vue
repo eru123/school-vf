@@ -25,10 +25,10 @@ export default {
       .then(() => {
         this.$router.push({ name: "Auth" });
       })
-      .catch((e) => {
+      .catch(e => {
         console.log("[LOGOUT] Error:", e);
         this.$router.push({ name: "Auth" });
       });
-  },
+  }
 };
 </script>

@@ -9,14 +9,12 @@ const routes = [
   {
     path: "/about",
     name: "Home",
-    component: function () {
-      return import("../views/About.vue");
-    }
+    component: () => import("@/views/About.vue")
   },
   {
     path: "/logout",
     name: "Logout",
-    component: () => (import("@/views/Logout.vue"))
+    component: () => import("@/views/Logout.vue")
   }
 ];
 

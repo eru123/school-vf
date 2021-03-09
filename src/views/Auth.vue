@@ -18,7 +18,9 @@
         <div v-if="tab == 1">
           <Login class="af-main" />
           <div class="af-bottom">
-            <p>Do not have an account? <span @click="tab = 2">Sign up now</span></p>
+            <p>
+              Do not have an account? <span @click="tab = 2">Sign up now</span>
+            </p>
             <p>
               By creating an signing in, you agreed to our
               <span @click="tab = 3">Terms and Agreements</span>
@@ -28,7 +30,9 @@
         <div v-if="tab == 2">
           <Register class="af-main" />
           <div class="af-bottom">
-            <p>Already have an account? <span @click="tab = 1">Sign in now</span></p>
+            <p>
+              Already have an account? <span @click="tab = 1">Sign in now</span>
+            </p>
             <p>
               By signing up, you agreed to our
               <span @click="tab = 3">Terms and Agreements</span>
@@ -56,10 +60,10 @@ export default {
   name: "Auth",
   data: () => ({
     loaded: false,
-    tab: 1,
+    tab: 1
   }),
   created() {
-    firebase.auth().onAuthStateChanged((user) => {
+    firebase.auth().onAuthStateChanged(user => {
       if (user) {
         this.$router.push({ name: "Home" });
       } else {
@@ -69,7 +73,7 @@ export default {
   },
   components: {
     Login,
-    Register,
-  },
+    Register
+  }
 };
 </script>

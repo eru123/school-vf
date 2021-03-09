@@ -2,9 +2,22 @@
   <div class="auth-form">
     <h1>Sign in</h1>
     <div>
-      <div class="auth-form-error" v-if="error" @click="error = ''">{{ error }}</div>
-      <input type="text" v-model="email" placeholder="Email" :disabled="loading" /> <br />
-      <input type="password" v-model="pass" placeholder="Password" :disabled="loading" />
+      <div class="auth-form-error" v-if="error" @click="error = ''">
+        {{ error }}
+      </div>
+      <input
+        type="text"
+        v-model="email"
+        placeholder="Email"
+        :disabled="loading"
+      />
+      <br />
+      <input
+        type="password"
+        v-model="pass"
+        placeholder="Password"
+        :disabled="loading"
+      />
       <br />
       <button @click="submit" :disabled="loading">Authenticate</button>
     </div>
@@ -19,7 +32,7 @@ export default {
     email: "",
     pass: "",
     loading: false,
-    error: "",
+    error: ""
   }),
   methods: {
     async submit() {
@@ -31,17 +44,21 @@ export default {
           .then(() => {
             return "";
           })
-          .catch((error) => {
-            return error.message || `Error code: ${error.code}` || "Unknown Error Occur";
+          .catch(error => {
+            return (
+              error.message ||
+              `Error code: ${error.code}` ||
+              "Unknown Error Occur"
+            );
           })
-          .finally((e) => {
+          .finally(e => {
             this.loading = false;
             return e;
           });
       } else {
         this.error = "Input the credentials first";
       }
-    },
-  },
+    }
+  }
 };
 </script>
