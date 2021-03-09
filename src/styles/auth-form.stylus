@@ -1,5 +1,5 @@
 .auth-form
-    input,button
+    input,button,.auth-form-error
         font-family Arial
         padding 1em 1.5em
         border-radius .5em
@@ -7,14 +7,28 @@
         margin-bottom 1em
         outline none
         border none
+    .auth-form-error
+        border 1px solid #ff5233
+        background #ffe9e6
+        max-width 70%
+        margin .5em auto 1em auto
+        color #cc1f00
     input 
         background #f2f2f2
+        color #333
         &:hover
             background #e6e6e6
         &:focus
             background #d9d9d9
+        &:disabled
+            color #ccc
+            background #f2f2f2
     button
         background #0073e6
         color white
         &:hover
             background #004d99
+            color white
+        &:disabled
+            background #99ccff
+            color #004d99
