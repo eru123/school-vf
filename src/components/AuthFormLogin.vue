@@ -42,6 +42,7 @@ export default {
           .auth()
           .signInWithEmailAndPassword(this.email, this.pass)
           .then(() => {
+            this.$router.push({ name: "Home" });
             return "";
           })
           .catch(error => {

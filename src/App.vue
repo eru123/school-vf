@@ -1,4 +1,17 @@
 <template>
+  <div class="lds-cnt" v-if="loading">
+    <div class="lds-roller">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="lds-msg">{{ loadingMessage }}</div>
+  </div>
   <router-view />
 </template>
 <script>
@@ -7,12 +20,16 @@ import "@firebase/auth";
 export default {
   name: "App",
   created() {
+    this.$store.commit("loading", true);
     firebase.auth().onAuthStateChanged(user => {
+      this.$store.commit("loading", false);
+      this.$store.commit("loaded", true);
       if (user) {
         console.log("authenticated from App.vue", user);
         this.$store.commit("usr", user);
       } else {
         console.log("log in first");
+        this.$store.commit("usr", {});
       }
     });
   }

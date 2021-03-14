@@ -42,6 +42,7 @@ export default {
           .auth()
           .createUserWithEmailAndPassword(this.email, this.pass)
           .then(() => {
+            this.$router.push({ name: "VerifyEmail" });
             return "";
           })
           .catch(error => {

@@ -7,14 +7,24 @@ const routes = [
     component: () => import("@/views/Auth.vue")
   },
   {
-    path: "/about",
+    path: "/home",
     name: "Home",
-    component: () => import("@/views/About.vue")
+    component: () => import("@/views/Home.vue")
   },
   {
     path: "/logout",
     name: "Logout",
     component: () => import("@/views/Logout.vue")
+  },
+  {
+    path: "/verify_email",
+    name: "VerifyEmail",
+    component: () => import("@/views/VerifyEmail.vue")
+  },
+  {
+    path: "/error/500",
+    name: "InternalError",
+    component: () => import("@/views/InternalError.vue")
   }
 ];
 

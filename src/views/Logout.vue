@@ -1,32 +1,22 @@
 <template>
-  <div class="lds-cnt">
-    <div class="lds-roller">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <div class="lds-msg">Logging out<i></i><i></i><i></i></div>
-  </div>
+  <div></div>
 </template>
 <script>
 import firebase from "@/firebase";
-
+import "@firebase/auth";
 export default {
   name: "Logout",
-  created() {
-    firebase
+  async created() {
+    this.$store.commit("loading", true);
+    await firebase
       .auth()
       .signOut()
       .then(() => {
+        this.$store.commit("loading", false);
         this.$router.push({ name: "Auth" });
       })
-      .catch(e => {
-        console.log("[LOGOUT] Error:", e);
+      .catch(() => {
+        this.$store.commit("loading", false);
         this.$router.push({ name: "Auth" });
       });
   }
