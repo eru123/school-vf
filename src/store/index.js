@@ -15,9 +15,11 @@ export default createStore({
     usr(state, value) {
       state.usr = value;
     },
-    loading(state, value, msg = "") {
+    loading(state, value) {
       state.loading = Boolean(value);
-      state.loadingMessage = msg;
+    },
+    loadingMessage(state, msg) {
+      state.loadingMessage = String(msg);
     },
     loaded(state, value) {
       state.loaded = Boolean(value);
