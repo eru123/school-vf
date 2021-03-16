@@ -1,17 +1,21 @@
 <template>
-  <div>
-    <h1>Verify Email</h1>
-    <div class="verify-email-card">
-      <div>
-        <button class="blue" @click="sendVerification" :disabled="timer">
-          Send Email Verification <span v-if="timer">({{ timer }}s)</span>
-        </button>
-      </div>
-      <div>
-        <button class="green" @click="verifyEmail">
-          I already verified my Email
-        </button>
-      </div>
+  <Header :title="appGlobal.name">
+    <Icon
+      name="mdi-exit-to-app"
+      @click="GlobalButtonLogout"
+      title="Logout Account"
+    />
+  </Header>
+  <div class="verify-email-card">
+    <div>
+      <button class="blue" @click="sendVerification" :disabled="timer">
+        Send Email Verification <span v-if="timer">({{ timer }}s)</span>
+      </button>
+    </div>
+    <div>
+      <button class="green" @click="verifyEmail">
+        I already verified my Email
+      </button>
     </div>
   </div>
 </template>
@@ -29,16 +33,23 @@ export default {
     }
   },
   methods: {
-    sendVerification() {
+    async sendVerification() {
       this.openTimer();
       if (this.reusr().emailVerified) {
         this.$router.push({ name: "Home" });
       } else {
+        this.$store.commit("loading", true);
+        this.$store.commit("loadingMessage", "Sending Email Verification");
         this.usr.sendEmailVerification();
+        await this.delay(5000).then(() => {
+          this.$store.commit("loading", false);
+          this.$store.commit("loadingMessage", "");
+        });
       }
     },
     async verifyEmail() {
-      this.$store.commit("loading", true, "Verifying Email");
+      this.$store.commit("loading", true);
+      this.$store.commit("loadingMessage", "Verifying Email");
       if (this.reusr().emailVerified) {
         this.$router.push({ name: "Home" });
         this.error = "";
@@ -48,7 +59,15 @@ export default {
       }
       await this.delay(5000)
         .then(() => {
+          if (this.reusr().emailVerified) {
+            this.$router.push({ name: "Home" });
+            this.error = "";
+          } else {
+            this.error =
+              "To verify your email, click the verification link sent to your email";
+          }
           this.$store.commit("loading", false);
+          this.$store.commit("loadingMessage", "");
           if (this.error.length > 0) {
             alert(this.error);
           }
