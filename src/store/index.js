@@ -5,7 +5,11 @@ export default createStore({
     usr: {},
     loaded: false,
     loading: false,
-    loadingMessage: ""
+    loadingMessage: "",
+    appGlobal: {
+      name: "School App",
+      version: "1.0-alpha"
+    }
   },
   mutations: {
     usr(state, value) {

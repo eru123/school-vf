@@ -3,8 +3,10 @@ import App from "./App.vue";
 import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
-
 import firebase from "@/firebase";
+
+import mdi from "@/directives/mdi";
+import GIcon from "@/components/GIcon.vue";
 
 const vx = {
   methods: {
@@ -35,6 +37,9 @@ const vx = {
     },
     loadingMessage() {
       return this.$store.state.loadingMessage;
+    },
+    appGlobal() {
+      return this.$store.state.appGlobal;
     }
   }
 };
@@ -43,4 +48,7 @@ createApp(App)
   .use(store)
   .use(router)
   .mixin(vx)
+  .directive("mdi", mdi)
+  .directive("icon", mdi)
+  .component("Icon", GIcon)
   .mount("#app");
