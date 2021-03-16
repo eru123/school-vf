@@ -4,10 +4,9 @@ import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
 import firebase from "@/firebase";
-
 import mdi from "@/directives/mdi";
 import GIcon from "@/components/GIcon.vue";
-
+import Header from "@/components/Header.vue";
 const vx = {
   methods: {
     reusr() {
@@ -19,6 +18,14 @@ const vx = {
     },
     delay(ms) {
       return new Promise(resolve => setTimeout(resolve, ms));
+    },
+    GlobalButtonHome() {
+      this.$router.push({ name: "Home" });
+    },
+    GlobalButtonLogout() {
+      if (confirm("Are you sure you want to Logout?")) {
+        this.$router.push({ name: "Logout" });
+      }
     }
   },
   computed: {
@@ -51,4 +58,5 @@ createApp(App)
   .directive("mdi", mdi)
   .directive("icon", mdi)
   .component("Icon", GIcon)
+  .component("Header", Header)
   .mount("#app");
