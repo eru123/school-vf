@@ -10,7 +10,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint --fix",
-    "start": "vue-cli-service serve --open"
+    "start": "vue-cli-service serve --open",
+    "ghpages:deploy": "vue-cli-service lint --fix && vue-cli-service build --dest docs && git add docs && git commit -am Deploy && git push"
   },
   "main": "index.js",
   "dependencies": {
