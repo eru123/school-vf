@@ -17,6 +17,7 @@
 <script>
 import firebase from "@/firebase";
 import "@firebase/auth";
+import "@mdi/font/css/materialdesignicons.min.css";
 export default {
   name: "App",
   created() {
@@ -25,10 +26,8 @@ export default {
       this.$store.commit("loading", false);
       this.$store.commit("loaded", true);
       if (user) {
-        console.log("authenticated from App.vue", user);
         this.$store.commit("usr", user);
       } else {
-        console.log("log in first");
         this.$store.commit("usr", {});
       }
     });
