@@ -38,6 +38,8 @@ export default {
     async submit() {
       if (this.email && this.pass) {
         this.loading = true;
+        this.$store.commit("loading", true);
+        this.$store.commit("loadingMessage", "Logging in");
         this.error = await firebase
           .auth()
           .signInWithEmailAndPassword(this.email, this.pass)
@@ -54,6 +56,8 @@ export default {
           })
           .finally(e => {
             this.loading = false;
+            this.$store.commit("loading", false);
+            this.$store.commit("loadingMessage", "");
             return e;
           });
       } else {
