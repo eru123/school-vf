@@ -4,7 +4,21 @@ import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
 
+import firebase from "@/firebase";
+
 const vx = {
+  methods: {
+    reusr() {
+      if (firebase.auth().currentUser) {
+        firebase.auth().currentUser.reload();
+        this.$store.commit("usr", firebase.auth().currentUser);
+        return this.$store.state.usr;
+      }
+    },
+    delay(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+  },
   computed: {
     loaded() {
       return this.$store.state.loaded;

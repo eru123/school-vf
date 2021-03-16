@@ -22,3 +22,11 @@
         cursor pointer
         &:hover
             color #0066cc
+
+       
+@media only screen and (max-width: 500px) {
+  .af-container {
+      border-radius: none;
+      box-shadow: none;
+  }
+}
