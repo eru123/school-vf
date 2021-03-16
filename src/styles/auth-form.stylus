@@ -26,6 +26,7 @@
     button
         background #0073e6
         color white
+        cursor pointer
         &:hover
             background #004d99
             color white
