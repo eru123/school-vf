@@ -19,7 +19,6 @@ const mdi = {
       el.classList.value = tmp + " " + el.classList.value;
       el.innerHTML = "";
     }
-    console.log(el.classList);
   }
 };
 
