@@ -13,10 +13,12 @@ export default {
       .signOut()
       .then(() => {
         this.$store.commit("loading", false);
+        this.$store.commit("loadingMessage", "Logging out");
         this.$router.push({ name: "Auth" });
       })
       .catch(() => {
         this.$store.commit("loading", false);
+        this.$store.commit("loadingMessage", "");
         this.$router.push({ name: "Auth" });
       });
   }
