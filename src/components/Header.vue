@@ -2,10 +2,7 @@
   <header class="base-header-component">
     <div>{{ title }}</div>
     <div>
-      <Icon name="mdi-account" />
-      <Icon name="mdi-account" />
-      <Icon name="mdi-account" />
-      <Icon name="mdi-exit-to-app" />
+      <slot></slot>
     </div>
   </header>
 </template>
@@ -35,12 +32,15 @@ export default {
     font-size: 1.5em;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    padding: 8px 0;
+    padding: 10px 0;
+    margin: 8px 0;
+    transition: 0.2s;
   }
 
   div:last-child {
     flex: auto;
     text-align: right;
+    display: block;
 
     > * {
       display: inline-block;
@@ -48,6 +48,8 @@ export default {
       margin: 8px 4px;
       border-radius: 50%;
       font-size: 1.5em;
+      transition: 0.2s;
+      cursor: pointer;
 
       &:hover {
         background: rgba(0, 0, 0, 0.5);
@@ -55,6 +57,46 @@ export default {
 
       &:active {
         background: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .base-header-component {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0;
+    padding: 0;
+
+    div:first-child {
+      align-self: flex-start;
+      font-size: 1.4em;
+      padding: 0.5em;
+      margin: 0;
+    }
+
+    div:last-child {
+      display: flex;
+      flex-direction: row;
+
+      > * {
+        text-align: center;
+        flex: 1;
+        padding: 10px auto;
+        margin: 0;
+        border-radius: 0;
+        cursor: pointer;
+        background: rgba(0, 0, 0, 0.1);
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.5);
+        }
+
+        &:active {
+          background: rgba(0, 0, 0, 0.3);
+        }
       }
     }
   }
