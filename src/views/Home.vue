@@ -1,5 +1,11 @@
 <template>
-  <Header :title="appGlobal.name"></Header>
+  <Header :title="appGlobal.name" :titleCallback="GlobalButtonHome">
+    <Icon
+      name="mdi-exit-to-app"
+      @click="GlobalButtonLogout"
+      title="Logout Account"
+    />
+  </Header>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
@@ -8,12 +14,10 @@
 
 <script>
 import HelloWorld from "@/components/HelloWorld.vue";
-import Header from "@/components/Header.vue";
 export default {
   name: "Home",
   components: {
-    HelloWorld,
-    Header
+    HelloWorld
   }
 };
 </script>

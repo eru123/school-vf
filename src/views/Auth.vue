@@ -1,6 +1,25 @@
 <template>
+  <Header :title="appGlobal.name">
+    <Icon
+      v-if="tab != 1"
+      @click="tab = 1"
+      name="mdi-login"
+      title="Login Account"
+    />
+    <Icon
+      v-if="tab != 2"
+      @click="tab = 2"
+      name="mdi-account-edit"
+      title="Create new Account"
+    />
+    <Icon
+      v-if="tab != 3"
+      name="mdi-clipboard-text"
+      @click="tab = 3"
+      title="Terms and Agreements"
+    />
+  </Header>
   <div class="page-auth" v-if="loaded">
-    <h1>Authentication</h1>
     <div class="af-container">
       <div v-if="tab == 1">
         <Login class="af-main" />
