@@ -23,7 +23,7 @@ export default {
   created() {
     this.$store.commit("loading", true);
     this.$store.commit("loadingMessage", "Auth Guard");
-    firebase.auth().onAuthStateChanged(async (user) => {
+    firebase.auth().onAuthStateChanged(async user => {
       this.$store.commit("loading", false);
       this.$store.commit("loaded", true);
       if (user) {
@@ -32,7 +32,7 @@ export default {
         this.$store.commit("usr", {});
       }
     });
-  },
+  }
 };
 </script>
 <style lang="stylus">
