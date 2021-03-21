@@ -1,11 +1,5 @@
 <template>
-  <Header :title="appGlobal.name" :titleCallback="GlobalButtonHome">
-    <Icon
-      name="mdi-exit-to-app"
-      @click="GlobalButtonLogout"
-      title="Logout Account"
-    />
-  </Header>
+  <AuthHeader />
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
@@ -13,10 +7,12 @@
 </template>
 
 <script>
+import AuthHeader from "@/components/AuthenticatedHeader.vue";
 import HelloWorld from "@/components/HelloWorld.vue";
 export default {
   name: "Home",
   components: {
+    AuthHeader,
     HelloWorld
   }
 };

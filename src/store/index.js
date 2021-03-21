@@ -6,6 +6,7 @@ export default createStore({
     loaded: false,
     loading: false,
     loadingMessage: "",
+    settingsTab: false,
     appGlobal: {
       name: "School App",
       version: "1.0-alpha"
@@ -23,6 +24,9 @@ export default createStore({
     },
     loaded(state, value) {
       state.loaded = Boolean(value);
+    },
+    settingsTab(state, value) {
+      state.settingsTab = Boolean(value);
     }
   },
   actions: {},
