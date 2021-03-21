@@ -40,7 +40,7 @@ $header-border-color = #ccc;
         font-size: 1.5em;
         transition: 0.2s;
         cursor: pointer;
-        
+        color #fff
 
 
         &:visited {
