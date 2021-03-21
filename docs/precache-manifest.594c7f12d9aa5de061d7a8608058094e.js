@@ -20,12 +20,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/school-vf/img/logo.82b9c7a5.png"
   },
   {
-    "revision": "af592de38d312382048e5b12181083a6",
+    "revision": "e9a8209874ace3c8bb46215207b60dd9",
     "url": "/school-vf/index.html"
   },
   {
-    "revision": "c22f756f1ad5fb0a41cd",
-    "url": "/school-vf/js/app.d34a6cce.js"
+    "revision": "d91b71a9800830e19bd8",
+    "url": "/school-vf/js/app.8406e272.js"
   },
   {
     "revision": "4da1372d4138a3a975f8",
