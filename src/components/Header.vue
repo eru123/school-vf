@@ -11,7 +11,7 @@ import "@/styles/header.stylus";
 export default {
   name: "Header",
   props: {
-    title: String,
-  },
+    title: String
+  }
 };
 </script>
