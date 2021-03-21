@@ -1,13 +1,12 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
-
-import Auth from "@/views/Auth.vue"
-import Home from "@/views/Home.vue"
-import Logout from "@/views/Logout.vue"
-import Settings from "@/views/Settings.vue"
-import Account from "@/views/Account.vue"
-import VerifyEmail from "@/views/VerifyEmail.vue"
-import InternalErrorPage from "@/views/InternalError.vue"
+import Auth from "@/views/Auth.vue";
+import Home from "@/views/Home.vue";
+import Logout from "@/views/Logout.vue";
+import Settings from "@/views/Settings.vue";
+import Account from "@/views/Account.vue";
+import VerifyEmail from "@/views/VerifyEmail.vue";
+import InternalErrorPage from "@/views/InternalError.vue";
 
 const routes = [
   {

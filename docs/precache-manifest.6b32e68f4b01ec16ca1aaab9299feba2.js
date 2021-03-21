@@ -20,44 +20,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/school-vf/img/logo.82b9c7a5.png"
   },
   {
-    "revision": "24f15a3c6f298b2803ffd0c67a48e7ff",
+    "revision": "af592de38d312382048e5b12181083a6",
     "url": "/school-vf/index.html"
   },
   {
-    "revision": "e60d0394f59f4ffca956",
-    "url": "/school-vf/js/app.22f4e09d.js"
+    "revision": "c22f756f1ad5fb0a41cd",
+    "url": "/school-vf/js/app.d34a6cce.js"
   },
   {
-    "revision": "8447794ecc8822faa8b3",
-    "url": "/school-vf/js/chunk-2a5e5ab2.18688e2c.js"
-  },
-  {
-    "revision": "3e0162eadb8d851e35fb",
-    "url": "/school-vf/js/chunk-2d0e266c.b9b1f9a9.js"
-  },
-  {
-    "revision": "0f273bdcb5b3bb27b730",
-    "url": "/school-vf/js/chunk-2d215fa4.a68e85d9.js"
-  },
-  {
-    "revision": "3d860bb2cc9e279f460c",
-    "url": "/school-vf/js/chunk-43180e8f.634d1b38.js"
-  },
-  {
-    "revision": "b8a408ed316b6c137708",
-    "url": "/school-vf/js/chunk-a1ea2e2c.fa085bdd.js"
-  },
-  {
-    "revision": "35ddc235b307624b3cee",
-    "url": "/school-vf/js/chunk-ced0bd64.5643407a.js"
-  },
-  {
-    "revision": "17797460f7d48180463f",
-    "url": "/school-vf/js/chunk-d3c19e98.69bff97a.js"
-  },
-  {
-    "revision": "cc7fcb8a5a6826e629f2",
-    "url": "/school-vf/js/chunk-ffeec93a.868e7f21.js"
+    "revision": "4da1372d4138a3a975f8",
+    "url": "/school-vf/js/chunk-481d74ca.346c9a57.js"
   },
   {
     "revision": "a20bbf896bb05024fc1bd816166697ad",
