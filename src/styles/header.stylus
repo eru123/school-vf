@@ -52,11 +52,11 @@ $header-border-color = #ccc;
         }
 
         &:hover{
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.1);
         }
 
         &:active {
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.2);
         }
     }
   }
@@ -92,14 +92,14 @@ $header-border-color = #ccc;
         margin: 0;
         border-radius: 0;
         cursor: pointer;
-        background: rgba(0, 0, 0, 0.1);
+        background: rgba(0, 0, 0, 0.05);
 
         &:hover {
-          background: rgba(0, 0, 0, 0.5);
+          background: rgba(0, 0, 0, 0.12);
         }
 
         &:active {
-          background: rgba(0, 0, 0, 0.3);
+          background: rgba(0, 0, 0, 0.22);
         }
       }
     }
