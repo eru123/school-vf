@@ -7,6 +7,8 @@ import firebase from "@/firebase";
 import mdi from "@/directives/mdi";
 import GIcon from "@/components/GIcon.vue";
 import Header from "@/components/Header.vue";
+import AuthHeader from "@/components/AuthenticatedHeader.vue";
+
 const vx = {
   methods: {
     reusr() {
@@ -59,4 +61,5 @@ createApp(App)
   .directive("icon", mdi)
   .component("Icon", GIcon)
   .component("Header", Header)
+  .component("AuthHeader", AuthHeader)
   .mount("#app");

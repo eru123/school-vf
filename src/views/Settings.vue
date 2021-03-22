@@ -4,12 +4,8 @@
 </template>
 
 <script>
-import AuthHeader from "@/components/AuthenticatedHeader.vue";
 import "@/styles/settings-page.stylus";
 export default {
-  name: "Settings",
-  components: {
-    AuthHeader
-  }
+  name: "Settings"
 };
 </script>
