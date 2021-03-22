@@ -1,24 +1,36 @@
-<!DOCTYPE html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><!--[if IE]><link rel="icon" href="/school-vf/favicon.ico"><![endif]--><title>School App</title><style>body {
+<!DOCTYPE html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><!--[if IE]><link rel="icon" href="/school-vf/favicon.ico"><![endif]--><title>School App</title><style>dialog {
+      outline: none;
+    }
+
+    body {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
     .lds-cnt {
-      position: relative;
-      z-index: initial;
+      position: fixed;
+      z-index: 1;
       top: 0;
       right: 0;
       width: 100vw;
       height: 100vh;
+      max-width: 100vw;
+      max-height: 100vh;
       margin: 0;
       padding: 0;
+      border: none;
       overflow: hidden;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: rgba(255, 255, 255, 0.5);
+      background: rgba(255, 255, 255, 0.95);
+      animation: lds-fade-in 2s;
+    }
+
+    .lds-cnt.lds-fade-out {
+      animation: lds-fade-out 2s;
     }
 
 
@@ -142,6 +154,34 @@
       left: 12px;
     }
 
+    @keyframes lds-fade-in {
+      0% {
+        opacity: 0;
+      }
+
+      80% {
+        opacity: 50;
+      }
+
+      100% {
+        opacity: 100;
+      }
+    }
+
+    @keyframes lds-fade-out {
+      0% {
+        opacity: 100;
+      }
+
+      80% {
+        opacity: 50;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
     @keyframes lds-roller {
       0% {
         transform: rotate(0deg);
@@ -181,4 +221,4 @@
           .25em 0 0 white,
           .5em 0 0 white;
       }
-    }</style><link href="/school-vf/js/chunk-481d74ca.346c9a57.js" rel="prefetch"><link href="/school-vf/js/app.8406e272.js" rel="preload" as="script"><link rel="icon" type="image/png" sizes="32x32" href="/school-vf/img/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/school-vf/img/icons/favicon-16x16.png"><link rel="manifest" href="/school-vf/manifest.json"><meta name="theme-color" content="#4DBA87"><meta name="apple-mobile-web-app-capable" content="no"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="school"><link rel="apple-touch-icon" href="/school-vf/img/icons/apple-touch-icon-152x152.png"><link rel="mask-icon" href="/school-vf/img/icons/safari-pinned-tab.svg" color="#4DBA87"><meta name="msapplication-TileImage" content="/school-vf/img/icons/msapplication-icon-144x144.png"><meta name="msapplication-TileColor" content="#000000"></head><body><noscript><strong>We're sorry but School App doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"><div class="lds-cnt"><div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div><div class="lds-msg">Loading</div></div></div><script src="/school-vf/js/app.8406e272.js"></script></body></html>
+    }</style><link href="/school-vf/js/chunk-481d74ca.346c9a57.js" rel="prefetch"><link href="/school-vf/js/app.67eedf74.js" rel="preload" as="script"><link rel="icon" type="image/png" sizes="32x32" href="/school-vf/img/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/school-vf/img/icons/favicon-16x16.png"><link rel="manifest" href="/school-vf/manifest.json"><meta name="theme-color" content="#4DBA87"><meta name="apple-mobile-web-app-capable" content="no"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="school"><link rel="apple-touch-icon" href="/school-vf/img/icons/apple-touch-icon-152x152.png"><link rel="mask-icon" href="/school-vf/img/icons/safari-pinned-tab.svg" color="#4DBA87"><meta name="msapplication-TileImage" content="/school-vf/img/icons/msapplication-icon-144x144.png"><meta name="msapplication-TileColor" content="#000000"></head><body><noscript><strong>We're sorry but School App doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"><div class="lds-cnt"><div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div><div class="lds-msg">Loading</div></div></div><script src="/school-vf/js/app.67eedf74.js"></script></body></html>
