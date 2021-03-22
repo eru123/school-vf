@@ -1,5 +1,5 @@
 <template>
-  <div class="lds-cnt" v-if="loading">
+  <dialog class="lds-cnt" v-if="loading">
     <div class="lds-roller">
       <div></div>
       <div></div>
@@ -11,7 +11,7 @@
       <div></div>
     </div>
     <div class="lds-msg">{{ loadingMessage }}</div>
-  </div>
+  </dialog>
   <router-view />
 </template>
 <script>

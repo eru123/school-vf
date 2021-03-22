@@ -10,6 +10,10 @@
     <%= htmlWebpackPlugin.options.title %>
   </title>
   <style>
+    dialog {
+      outline: none;
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -17,20 +21,28 @@
     }
 
     .lds-cnt {
-      position: relative;
-      z-index: initial;
+      position: fixed;
+      z-index: 1;
       top: 0;
       right: 0;
       width: 100vw;
       height: 100vh;
+      max-width: 100vw;
+      max-height: 100vh;
       margin: 0;
       padding: 0;
+      border: none;
       overflow: hidden;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: rgba(255, 255, 255, 0.5);
+      background: rgba(255, 255, 255, 0.95);
+      animation: lds-fade-in 2s;
+    }
+
+    .lds-cnt.lds-fade-out {
+      animation: lds-fade-out 2s;
     }
 
 
@@ -152,6 +164,34 @@
     .lds-roller div:nth-child(8):after {
       top: 56px;
       left: 12px;
+    }
+
+    @keyframes lds-fade-in {
+      0% {
+        opacity: 0;
+      }
+
+      80% {
+        opacity: 50;
+      }
+
+      100% {
+        opacity: 100;
+      }
+    }
+
+    @keyframes lds-fade-out {
+      0% {
+        opacity: 100;
+      }
+
+      80% {
+        opacity: 50;
+      }
+
+      100% {
+        opacity: 0;
+      }
     }
 
     @keyframes lds-roller {
