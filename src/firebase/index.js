@@ -1,8 +1,5 @@
 import firebase from "@firebase/app";
 
-import("@firebase/auth");
-import("@firebase/firestore");
-
 // For Firebase JavaScript SDK v7.20.0 and later, `measurementId` is an optional field
 var firebaseConfig = {
   apiKey: process.env.VUE_APP_FIREBASE_APIKEY,
