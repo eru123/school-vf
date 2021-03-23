@@ -14,10 +14,10 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.b6b8d0892dabab05af6aa17645d8aeb4.js"
+  "/precache-manifest.04b8cd215d70f66413f22692c57e2bd2.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "school"});
+workbox.core.setCacheNameDetails({prefix: "school-vf"});
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {

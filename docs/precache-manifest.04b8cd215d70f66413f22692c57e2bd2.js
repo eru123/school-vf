@@ -20,15 +20,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/logo.82b9c7a5.png"
   },
   {
-    "revision": "f28bfe9385d2292b8e293f40979683ea",
+    "revision": "392eb66bff8a1a04734815d515b9dfae",
     "url": "/index.html"
   },
   {
-    "revision": "a69a82671dfd9e154e1f",
-    "url": "/js/app.a978b8a4.js"
+    "revision": "734e50c8c93d58a74c15",
+    "url": "/js/app.5c64c285.js"
   },
   {
-    "revision": "a20bbf896bb05024fc1bd816166697ad",
+    "revision": "ed49b6d83da038b8d4a8a39e817679ca",
     "url": "/manifest.json"
   },
   {

@@ -7,7 +7,7 @@ export default createStore({
     loading: false,
     loadingMessage: "",
     appGlobal: {
-      name: "School App",
+      name: "SchoolNatin",
       version: "1.0-alpha"
     }
   },
