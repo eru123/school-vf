@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === "production" ? "/school-vf/" : "/",
+  publicPath: process.env.NODE_ENV === "production" ? "/" : "/",
   productionSourceMap: false,
   configureWebpack: {
     optimization: {

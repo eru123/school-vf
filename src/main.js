@@ -4,12 +4,29 @@ import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
 import firebase from "@/firebase";
+
+import "@firebase/auth";
+import "@firebase/firestore";
+import "@firebase/database";
+
+if (process.env.NODE_ENV == "development" && location.hostname == "localhost") {
+  console.log("ok from localhost");
+  var auth = firebase.auth();
+  var db = firebase.database();
+  var fs = firebase.firestore();
+
+  auth.useEmulator("http://localhost:9099");
+  db.useEmulator("localhost", 9000);
+  fs.useEmulator("localhost", 8080);
+}
+
 import mdi from "@/directives/mdi";
 import GIcon from "@/components/GIcon.vue";
 import Header from "@/components/Header.vue";
 import AuthHeader from "@/components/AuthenticatedHeader.vue";
 
 const vx = {
+  created() {},
   methods: {
     reusr() {
       if (firebase.auth().currentUser) {
